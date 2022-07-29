@@ -1,0 +1,4 @@
+".\Objects\STARTUP.obj",
+".\Objects\Intelligent Home Control System.obj" 
+TO ".\Objects\Intelligent Home Control System" 
+PRINT(".\Listings\Intelligent Home Control System.m51") RAMSIZE(256) 

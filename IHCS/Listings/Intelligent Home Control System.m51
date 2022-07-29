@@ -1,0 +1,276 @@
+BL51 BANKED LINKER/LOCATER V6.22.2.0                                                    07/29/2022  18:47:49  PAGE 1
+
+
+BL51 BANKED LINKER/LOCATER V6.22.2.0, INVOKED BY:
+C:\KEIL_V5\C51\BIN\BL51.EXE .\Objects\STARTUP.obj, .\Objects\Intelligent Home Control System.obj TO .\Objects\Intelligen
+>> t Home Control System PRINT (.\Listings\Intelligent Home Control System.m51) RAMSIZE (256)
+
+
+MEMORY MODEL: SMALL
+
+
+INPUT MODULES INCLUDED:
+  .\Objects\STARTUP.obj (?C_STARTUP)
+  .\Objects\Intelligent Home Control System.obj (INTELLIGENT_HOME_CONTROL_SYSTEM)
+  C:\KEIL_V5\C51\LIB\C51S.LIB (?C_INIT)
+
+
+LINK MAP OF MODULE:  .\Objects\Intelligent Home Control System (?C_STARTUP)
+
+
+            TYPE    BASE      LENGTH    RELOCATION   SEGMENT NAME
+            -----------------------------------------------------
+
+            * * * * * * *   D A T A   M E M O R Y   * * * * * * *
+            REG     0000H     0008H     ABSOLUTE     "REG BANK 0"
+            DATA    0008H     0009H     UNIT         ?DT?INTELLIGENT_HOME_CONTROL_SYSTEM
+            IDATA   0011H     0001H     UNIT         ?STACK
+
+            * * * * * * *   C O D E   M E M O R Y   * * * * * * *
+            CODE    0000H     0003H     ABSOLUTE     
+            CODE    0003H     0003H     ABSOLUTE     
+            CODE    0006H     0166H     UNIT         ?PR?SMG_DISPLAY?INTELLIGENT_HOME_CONTROL_SYSTEM
+            CODE    016CH     008CH     UNIT         ?C_C51STARTUP
+            CODE    01F8H     0077H     UNIT         ?PR?EXINT0?INTELLIGENT_HOME_CONTROL_SYSTEM
+            CODE    026FH     0013H     UNIT         ?CO?INTELLIGENT_HOME_CONTROL_SYSTEM
+            CODE    0282H     000FH     UNIT         ?PR?DELAY20MS?INTELLIGENT_HOME_CONTROL_SYSTEM
+            CODE    0291H     000DH     UNIT         ?PR?DELAY1MS?INTELLIGENT_HOME_CONTROL_SYSTEM
+            CODE    029EH     000BH     UNIT         ?PR?MAIN?INTELLIGENT_HOME_CONTROL_SYSTEM
+            CODE    02A9H     0004H     UNIT         ?C_INITSEG
+
+
+
+OVERLAY MAP OF MODULE:   .\Objects\Intelligent Home Control System (?C_STARTUP)
+
+
+SEGMENT
+  +--> CALLED SEGMENT
+---------------------
+?C_C51STARTUP
+  +--> ?PR?MAIN?INTELLIGENT_HOME_CONTROL_SYSTEM
+  +--> ?C_INITSEG
+
+?PR?MAIN?INTELLIGENT_HOME_CONTROL_SYSTEM
+  +--> ?PR?SMG_DISPLAY?INTELLIGENT_HOME_CONT...
+
+?PR?SMG_DISPLAY?INTELLIGENT_HOME_CONT...
+  +--> ?CO?INTELLIGENT_HOME_CONTROL_SYSTEM
+  +--> ?PR?DELAY1MS?INTELLIGENT_HOME_CONTROL...
+
+*** NEW ROOT ***************************************************
+
+BL51 BANKED LINKER/LOCATER V6.22.2.0                                                  07/29/2022  18:47:49  PAGE 2
+
+
+?PR?EXINT0?INTELLIGENT_HOME_CONTROL_S...
+  +--> ?PR?DELAY20MS?INTELLIGENT_HOME_CONTRO...
+
+
+
+SYMBOL TABLE OF MODULE:  .\Objects\Intelligent Home Control System (?C_STARTUP)
+
+  VALUE           TYPE          NAME
+  ----------------------------------
+
+  -------         MODULE        ?C_STARTUP
+  C:016CH         SEGMENT       ?C_C51STARTUP
+  I:0011H         SEGMENT       ?STACK
+  C:0000H         PUBLIC        ?C_STARTUP
+  D:00E0H         SYMBOL        ACC
+  D:00F0H         SYMBOL        B
+  D:0083H         SYMBOL        DPH
+  D:0082H         SYMBOL        DPL
+  N:0000H         SYMBOL        IBPSTACK
+  N:0100H         SYMBOL        IBPSTACKTOP
+  N:0080H         SYMBOL        IDATALEN
+  C:016FH         SYMBOL        IDATALOOP
+  N:0000H         SYMBOL        PBPSTACK
+  N:0100H         SYMBOL        PBPSTACKTOP
+  N:0000H         SYMBOL        PDATALEN
+  N:0000H         SYMBOL        PDATASTART
+  N:0000H         SYMBOL        PPAGE
+  N:0000H         SYMBOL        PPAGEENABLE
+  D:00A0H         SYMBOL        PPAGE_SFR
+  D:0081H         SYMBOL        SP
+  C:016CH         SYMBOL        STARTUP1
+  N:0000H         SYMBOL        XBPSTACK
+  N:0000H         SYMBOL        XBPSTACKTOP
+  N:0000H         SYMBOL        XDATALEN
+  N:0000H         SYMBOL        XDATASTART
+  C:0000H         LINE#         126
+  C:016CH         LINE#         133
+  C:016EH         LINE#         134
+  C:016FH         LINE#         135
+  C:0170H         LINE#         136
+  C:0172H         LINE#         185
+  C:0175H         LINE#         196
+  -------         ENDMOD        ?C_STARTUP
+
+  -------         MODULE        INTELLIGENT_HOME_CONTROL_SYSTEM
+  C:0000H         SYMBOL        _ICE_DUMMY_
+  D:0080H         PUBLIC        P0
+  D:0090H         PUBLIC        P1
+  D:00A0H         PUBLIC        P2
+  D:00B0H         PUBLIC        P3
+  D:00C0H         PUBLIC        P4
+  C:0295H         PUBLIC        Delay1ms
+  D:00C8H         PUBLIC        P5
+  B:00A8H.7       PUBLIC        EA
+  D:00E8H         PUBLIC        P6
+  D:00F8H         PUBLIC        P7
+  D:00A8H         PUBLIC        IE
+BL51 BANKED LINKER/LOCATER V6.22.2.0                                                  07/29/2022  18:47:49  PAGE 3
+
+
+  C:027AH         PUBLIC        smgwei
+  D:00B8H         PUBLIC        IP
+  C:0006H         PUBLIC        smg_display
+  D:00D8H         PUBLIC        CCON
+  C:029EH         PUBLIC        main
+  D:0098H         PUBLIC        SCON
+  D:0088H         PUBLIC        TCON
+  B:00B0H.2       PUBLIC        P32
+  C:0282H         PUBLIC        Delay20ms
+  B:0088H.0       PUBLIC        IT0
+  B:00A8H.0       PUBLIC        EX0
+  C:01F8H         PUBLIC        exint0
+  D:0008H         PUBLIC        Num1
+  D:0009H         PUBLIC        Num2
+  D:000AH         PUBLIC        Num3
+  D:000BH         PUBLIC        Num4
+  D:000CH         PUBLIC        Num5
+  D:000DH         PUBLIC        Num6
+  D:000EH         PUBLIC        Num7
+  D:000FH         PUBLIC        Num8
+  D:0010H         PUBLIC        k
+  C:026FH         PUBLIC        smgduan
+  D:00D0H         PUBLIC        PSW
+  -------         PROC          SMG_DISPLAY
+  C:0006H         LINE#         14
+  C:0006H         LINE#         15
+  C:0006H         LINE#         16
+  C:0017H         LINE#         17
+  C:0017H         LINE#         18
+  C:001DH         LINE#         19
+  C:0030H         LINE#         20
+  C:0030H         LINE#         21
+  C:0041H         LINE#         22
+  C:0041H         LINE#         23
+  C:0058H         LINE#         24
+  C:0058H         LINE#         25
+  C:0069H         LINE#         26
+  C:0069H         LINE#         27
+  C:0080H         LINE#         28
+  C:0080H         LINE#         29
+  C:0091H         LINE#         30
+  C:0091H         LINE#         31
+  C:00A8H         LINE#         32
+  C:00A8H         LINE#         33
+  C:00B9H         LINE#         34
+  C:00B9H         LINE#         35
+  C:00D0H         LINE#         36
+  C:00D0H         LINE#         37
+  C:00E1H         LINE#         38
+  C:00E1H         LINE#         39
+  C:00F8H         LINE#         40
+  C:00F8H         LINE#         41
+  C:0109H         LINE#         42
+  C:0109H         LINE#         43
+  C:0120H         LINE#         44
+  C:0120H         LINE#         45
+  C:0131H         LINE#         46
+BL51 BANKED LINKER/LOCATER V6.22.2.0                                                  07/29/2022  18:47:49  PAGE 4
+
+
+  C:0131H         LINE#         47
+  C:0148H         LINE#         48
+  C:0148H         LINE#         49
+  C:0159H         LINE#         50
+  C:0159H         LINE#         51
+  C:015FH         LINE#         52
+  C:016BH         LINE#         53
+  C:016BH         LINE#         54
+  -------         ENDPROC       SMG_DISPLAY
+  -------         PROC          MAIN
+  C:029EH         LINE#         57
+  C:029EH         LINE#         58
+  C:029EH         LINE#         59
+  C:02A0H         LINE#         60
+  C:02A2H         LINE#         61
+  C:02A4H         LINE#         63
+  C:02A4H         LINE#         64
+  C:02A4H         LINE#         65
+  C:02A7H         LINE#         66
+  -------         ENDPROC       MAIN
+  -------         PROC          EXINT0
+  C:01F8H         LINE#         70
+  C:0215H         LINE#         73
+  C:0218H         LINE#         74
+  C:0218H         LINE#         75
+  C:021BH         LINE#         76
+  C:021EH         LINE#         77
+  C:021EH         LINE#         78
+  C:0220H         LINE#         79
+  C:022EH         LINE#         80
+  C:022EH         LINE#         81
+  C:0231H         LINE#         82
+  C:0234H         LINE#         83
+  C:0237H         LINE#         84
+  C:023AH         LINE#         85
+  C:023DH         LINE#         86
+  C:0240H         LINE#         87
+  C:0243H         LINE#         88
+  C:0243H         LINE#         89
+  C:024EH         LINE#         90
+  C:024EH         LINE#         91
+  C:0251H         LINE#         92
+  C:0251H         LINE#         93
+  C:0251H         LINE#         94
+  C:0254H         LINE#         95
+  C:0254H         LINE#         96
+  -------         ENDPROC       EXINT0
+  C:0291H         SYMBOL        L?0038
+  -------         PROC          L?0037
+  -------         ENDPROC       L?0037
+  C:0291H         SYMBOL        L?0038
+  -------         PROC          DELAY1MS
+  -------         DO            
+  D:0007H         SYMBOL        i
+  D:0006H         SYMBOL        j
+  -------         ENDDO         
+  C:0295H         LINE#         99
+BL51 BANKED LINKER/LOCATER V6.22.2.0                                                  07/29/2022  18:47:49  PAGE 5
+
+
+  C:0295H         LINE#         100
+  C:0295H         LINE#         103
+  C:0297H         LINE#         104
+  C:0299H         LINE#         106
+  C:0299H         LINE#         107
+  C:029BH         LINE#         108
+  C:029DH         LINE#         109
+  -------         ENDPROC       DELAY1MS
+  -------         PROC          DELAY20MS
+  -------         DO            
+  D:0007H         SYMBOL        i
+  D:0006H         SYMBOL        j
+  D:0005H         SYMBOL        k
+  -------         ENDDO         
+  C:0282H         LINE#         111
+  C:0282H         LINE#         112
+  C:0282H         LINE#         115
+  C:0283H         LINE#         116
+  C:0284H         LINE#         117
+  C:0286H         LINE#         118
+  C:0288H         LINE#         119
+  C:028AH         LINE#         121
+  C:028AH         LINE#         123
+  C:028AH         LINE#         124
+  C:028CH         LINE#         125
+  C:028EH         LINE#         126
+  C:0290H         LINE#         127
+  -------         ENDPROC       DELAY20MS
+  -------         ENDMOD        INTELLIGENT_HOME_CONTROL_SYSTEM
+
+Program Size: data=18.0 xdata=0 code=685
+LINK/LOCATE RUN COMPLETE.  0 WARNING(S),  0 ERROR(S)
